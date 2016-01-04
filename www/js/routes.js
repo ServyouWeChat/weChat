@@ -48,7 +48,13 @@ angular.module('wechat.routes', [])
                     controller: "settingCtrl"
                 }
             }
-        });
+        })
+        .state('friendsCircle', {
+            url: '/friendsCircle',
+            templateUrl: 'templates/friendsCircle.html',
+            controller: "circleCtrl"
+        })
+    ;
 
     $urlRouterProvider.otherwise("/tab/message");
 });

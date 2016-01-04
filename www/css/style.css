@@ -31,12 +31,78 @@
     display: block;
     height: 100px;
 }
-.pic{
-    height: 80px !important;
-    width: 72px !important;
+#pic{
+    height: 80px;
+    width: 72px;
 }
 .name{
     display: block;
     margin-left: 70px;
     margin-top: 28px;;
 }
+.picture{
+    width: 100%;
+}
+.theme{
+    position: relative;
+}
+.myCircleName{
+    font-size: 20px;
+    color: white;
+    position:absolute;
+    bottom: 17px;;
+    right: 83px;;
+}
+.myCircleIcon{
+    position: absolute;
+    width: 63px;
+    bottom: -20px;
+    right: 10px;
+}
+.circleIcon{
+    float: left;
+    clear: both;
+}
+.oneImageContent{
+    margin-left: 40px;
+    display: block;
+    width: 60%;
+    clear: both;
+}
+.circleContent{
+    clear: both;
+    padding: 30px 10px 10px 10px;
+    border-bottom: 1px solid silver;
+}
+.circleName{
+    display: inline-block;
+    margin: 0px 10px;
+    clear: both;
+}
+.circleText{
+    margin: 0px 10px 0px 46px;
+}
+.mutipleImageContent{
+   width: 98%;
+}
+
+.marginP{
+    margin: 0 20px 0 40px;
+    height: 105px;
+}
+
+.imgWrap{
+    width: 33%;
+    float: left;
+}
+.prideIcon{
+    float: right;
+    margin-right: 20px;
+    color: gray;
+}
+.circleTime{
+    display: inline-block;
+    margin-left: 46px;
+    color: silver;
+}
+

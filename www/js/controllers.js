@@ -92,7 +92,6 @@ angular.module('wechat.controllers', [])
         $state.go("tab.find");
     };
 })
-
 .controller('messageDetailCtrl', ['$scope', '$stateParams',
     'messageService', '$ionicScrollDelegate', '$timeout',
     function($scope, $stateParams, messageService, $ionicScrollDelegate, $timeout) {
@@ -126,3 +125,47 @@ angular.module('wechat.controllers', [])
         });
     }
 ])
+ .controller('circleCtrl', function($scope) {
+        $scope.items=[
+            {
+                name: 'Adam',
+                icon: 'img/adam.jpg',
+                textContent: 'My name is Adam',
+                onePicture: true,
+                imageContent: 'img/adam.jpg',
+                time:'昨天'
+            },
+            {
+                name: 'Ben',
+                icon: 'img/ben.png',
+                onePicture: true,
+                textContent: 'My name is Ben',
+                imageContent: 'img/ben.png',
+                time:'昨天'
+            },
+            {
+                name: 'Max',
+                icon: 'img/max.png',
+                textContent: 'My name is Max',
+                onePicture: false,
+                imageContent: ['img/ben.png', 'img/ben.png','img/ben.png'],
+                time:'昨天'
+            },
+            {
+                name: 'Mike',
+                icon: 'img/mike.png',
+                textContent: 'My name is Mike',
+                onePicture: true,
+                imageContent: 'img/mike.png',
+                time:'昨天'
+            },
+            {
+                name: 'Perry',
+                icon: 'img/perry.png',
+                onePicture: true,
+                textContent: 'My name is Perry',
+                imageContent: 'img/perry.png',
+                time:'昨天'
+            }
+        ]
+})

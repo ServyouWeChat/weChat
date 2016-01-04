@@ -1,0 +1,37 @@
+<ion-header-bar align-title="left" class="bar-dark">
+    <div class="buttons">
+        <button class="button button-icon icon ion-arrow-left-c" ui-sref="tab.message">
+        </button>
+    </div>
+    <!-- <div class="h1 title" ng-bind="message.name">微信</div> -->
+    <div class="h1 title">朋友圈</div>
+    <div class="buttons">
+        <button class="button button-icon icon ion-camera"></button>
+    </div>
+</ion-header-bar>
+<ion-content class="rj-stable-content" delegate-handle="messageDetailsScroll" id="message-detail-content">
+    <ion-refresher pulling-text="..." on-refresh="doRefresh()" pulling-icon=""></ion-refresher>
+    <div class="theme"><img class="picture" ng-src="img/theme.jpg">
+        <span class="myCircleName">Orion</span>
+        <span><img class="myCircleIcon" src="img/adam.jpg"> </span>
+    </div>
+    <div class="circleContent" ng-repeat="item in items">
+        <div class="rj-contacts-pic circleIcon">
+            <img ng-src="{{item.icon}}">
+        </div>
+        <p class="circleName" ng-bind="item.name"></p>
+
+        <p class="circleText" ng-bind="item.textContent"></p>
+
+        <img ng-if="item.onePicture" class="oneImageContent" ng-src="{{item.imageContent}}">
+
+        <div ng-if="!item.onePicture" class="marginP">
+            <div class="imgWrap" ng-repeat="image in item.imageContent track by $index">
+                <img class="mutipleImageContent" ng-src="{{image}}">
+            </div>
+        </div>
+        <span class="circleTime">{{item.time}}</span>
+        <div class="prideIcon"><i class="ion-chatbox-working"></i></div>
+
+    </div>
+</ion-content>
