@@ -152,7 +152,6 @@ angular.module('wechat.services', [])
                             messageID[i] = {
                                 id: messages[i].id
                             };
-
                         }
                         localStorageService.update("messageID", messageID);
                         for (i = 0; i < length; i++) {
@@ -181,6 +180,7 @@ angular.module('wechat.services', [])
                     return null;
 
                 },
+
                 getMessageById: function(id){
                     return localStorageService.get("message_" + id);
                 },
@@ -230,3 +230,11 @@ angular.module('wechat.services', [])
             };
         }
     ])
+    .factory('listService', ['$http',function($http){
+        return {
+            initData:function(data){
+                sessionStorage.setItem("items", angular.toJson(data));
+            }
+        }
+
+    }]);

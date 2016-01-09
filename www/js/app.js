@@ -13,7 +13,7 @@ angular.module('wechat', ['ionic', 'wechat.controllers', 'wechat.routes',
 
 }])
 
-.run(function($ionicPlatform, $http, messageService, dateService) {
+.run(function($ionicPlatform, $http, messageService, dateService, listService) {
 
     var url = "";
     if (ionic.Platform.isAndroid()) {
@@ -28,8 +28,12 @@ angular.module('wechat', ['ionic', 'wechat.controllers', 'wechat.routes',
 
         });
         $http.get(url + "data/json/friends.json").then(function(response){
-            console.log(response.data.results);
+            //console.log(response.data.results);
         });
+        $http.get("data/json/list.json").then(function(response) {
+            listService.initData(response.data.lists);
+        });
+
     // }
     $ionicPlatform.ready(function() {
         // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard

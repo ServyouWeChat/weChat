@@ -1,0 +1,48 @@
+{
+  "lists": [
+    {
+      "name": "Adam",
+      "icon": "img/adam.jpg",
+      "textContent": "My name is Adam",
+      "onePicture": true,
+      "imageContent": "img/adam.jpg",
+      "time": "今天"
+    },
+    {
+      "name": "ben",
+      "icon": "img/ben.png",
+      "textContent": "My name is Ben",
+      "onePicture": true,
+      "imageContent": "img/ben.png",
+      "time": "昨天"
+    },
+    {
+      "name": "Adam",
+      "icon": "img/max.png",
+      "textContent": "My name is Max",
+      "onePicture": false,
+      "imageContent": [
+        "img/mike.png",
+        "img/ben.png",
+        "img/perry.png"
+      ],
+      "time": "昨天"
+    },
+    {
+      "name": "Mike",
+      "icon": "img/mike.png",
+      "textContent": "My name is Mike",
+      "onePicture": true,
+      "imageContent": "img/mike.png",
+      "time": "昨天"
+    },
+    {
+      "name": "Perry",
+      "icon": "img/perry.png",
+      "textContent": "My name is perry",
+      "onePicture": true,
+      "imageContent": "img/perry.png",
+      "time": "昨天"
+    }
+  ]
+}
