@@ -125,7 +125,7 @@ angular.module('wechat.controllers', [])
         });
     }
 ])
- .controller('circleCtrl', ['$scope', 'listService', function($scope, listService){
-        $scope.items = sessionStorage.getItem('items');
+ .controller('circleCtrl', ['$scope', 'listService','localStorageService', function($scope, listService, localStorageService){
+        $scope.items = localStorageService.get('items');
 
     }]);

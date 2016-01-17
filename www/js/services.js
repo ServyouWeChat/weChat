@@ -230,10 +230,14 @@ angular.module('wechat.services', [])
             };
         }
     ])
-    .factory('listService', ['$http',function($http){
+    .factory('listService', ['localStorageService',function(localStorageService){
         return {
             initData:function(data){
-                sessionStorage.setItem("items", angular.toJson(data));
+                var friendsCircleDatas = [];
+                var length = data.length;
+                console.log(length);
+                if(data)
+                    localStorageService.update('items', data);
             }
         }
 
